@@ -72,6 +72,15 @@ def static "com.CommonUtilities.ItineraryPage.VerifyItineraryPage"(
 }
 
 
+def static "com.CommonUtilities.Promote.CreateCampaignWithGivenVisitTypes"(
+    	String SourceChannel	
+     , 	String[] VisitTypes	) {
+    (new com.CommonUtilities.Promote()).CreateCampaignWithGivenVisitTypes(
+        	SourceChannel
+         , 	VisitTypes)
+}
+
+
 def static "com.CommonUtilities.SelfServeUtilities.LoginToSelfServeTool"() {
     (new com.CommonUtilities.SelfServeUtilities()).LoginToSelfServeTool()
 }
@@ -143,15 +152,6 @@ def static "com.CommonUtilities.SelfServeUtilities.SetSurvey_PerformancedFlagToT
     	Object SettingUrl	) {
     (new com.CommonUtilities.SelfServeUtilities()).SetSurvey_PerformancedFlagToTrue(
         	SettingUrl)
-}
-
-
-def static "com.CommonUtilities.Promote.CreateCampaignWithGivenVisitTypes"(
-    	String SourceChannel	
-     , 	String[] VisitTypes	) {
-    (new com.CommonUtilities.Promote()).CreateCampaignWithGivenVisitTypes(
-        	SourceChannel
-         , 	VisitTypes)
 }
 
 
@@ -689,16 +689,6 @@ def static "com.CommonUtilities.ConventionCurators.createTags"() {
     (new com.CommonUtilities.ConventionCurators()).createTags()
 }
 
-
-def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofDailyVisitAndEventVisitTypes"() {
-    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofDailyVisitAndEventVisitTypes()
-}
-
-
-def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofOffCampusVisitTypes"() {
-    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofOffCampusVisitTypes()
-}
-
 /**
 	 * Refresh browser
 	 */
@@ -731,6 +721,16 @@ def static "com.CommonUtilities.CreateTestObject.getHtmlTableRows"(
 }
 
 
+def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofDailyVisitAndEventVisitTypes"() {
+    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofDailyVisitAndEventVisitTypes()
+}
+
+
+def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofOffCampusVisitTypes"() {
+    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofOffCampusVisitTypes()
+}
+
+
 def static "com.CommonUtilities.EditRegistrantType.ChangeRegistrantTypeToGroupsOnly"(
     	String VisitType	) {
     (new com.CommonUtilities.EditRegistrantType()).ChangeRegistrantTypeToGroupsOnly(
@@ -744,20 +744,6 @@ def static "com.CommonUtilitiesofNACACstudentApp.LoginToStudentApp.loginToStuden
     (new com.CommonUtilitiesofNACACstudentApp.LoginToStudentApp()).loginToStudentApp(
         	username
          , 	password)
-}
-
-
-def static "com.CommonUtilities.VisitTypeSummaryPage.EditSettingsInSummaryPageInDailyVisitsAndEvents"(
-    	TestObject VisitTypeCategory	) {
-    (new com.CommonUtilities.VisitTypeSummaryPage()).EditSettingsInSummaryPageInDailyVisitsAndEvents(
-        	VisitTypeCategory)
-}
-
-
-def static "com.CommonUtilities.VisitTypeSummaryPage.EditSettingsInSummaryPageInOffCampus"(
-    	TestObject VisitTypeCategory	) {
-    (new com.CommonUtilities.VisitTypeSummaryPage()).EditSettingsInSummaryPageInOffCampus(
-        	VisitTypeCategory)
 }
 
 
@@ -795,14 +781,50 @@ def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getDayOfWeek"(
 }
 
 
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.addDays"(
-    	String stringDate	
-     , 	String dateFormat	
-     , 	int amount	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).addDays(
-        	stringDate
-         , 	dateFormat
-         , 	amount)
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getFutureDateTime"(
+    	int noOfDays	
+     , 	String timeZoneId	
+     , 	String dateTimeFormat	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getFutureDateTime(
+        	noOfDays
+         , 	timeZoneId
+         , 	dateTimeFormat)
+}
+
+
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.convertString2Date"(
+    	String value	
+     , 	String dateTimeFormat	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).convertString2Date(
+        	value
+         , 	dateTimeFormat)
+}
+
+
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getCurrentDateTime"(
+    	String timeZoneId	
+     , 	String dateTimeFormat	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getCurrentDateTime(
+        	timeZoneId
+         , 	dateTimeFormat)
+}
+
+
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getPreviousDateTime"(
+    	int noOfDays	
+     , 	String timeZoneId	
+     , 	String dateTimeFormat	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getPreviousDateTime(
+        	noOfDays
+         , 	timeZoneId
+         , 	dateTimeFormat)
+}
+
+
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.setDefaultTimeZone"(
+    	String timeZoneId	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).setDefaultTimeZone(
+        	timeZoneId)
 }
 
 
@@ -820,64 +842,35 @@ def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getDefaultTimeZone"
 }
 
 
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getCurrentDateTime"(
-    	String timeZoneId	
-     , 	String dateTimeFormat	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getCurrentDateTime(
-        	timeZoneId
-         , 	dateTimeFormat)
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.addDays"(
+    	String stringDate	
+     , 	String dateFormat	
+     , 	int amount	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).addDays(
+        	stringDate
+         , 	dateFormat
+         , 	amount)
 }
 
 
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getFutureDateTime"(
-    	int noOfDays	
-     , 	String timeZoneId	
-     , 	String dateTimeFormat	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getFutureDateTime(
-        	noOfDays
-         , 	timeZoneId
-         , 	dateTimeFormat)
-}
-
-
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.setDefaultTimeZone"(
-    	String timeZoneId	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).setDefaultTimeZone(
-        	timeZoneId)
-}
-
-
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.convertString2Date"(
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.formatStringDate"(
     	String value	
-     , 	String dateTimeFormat	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).convertString2Date(
+     , 	String currentFormat	
+     , 	String newFormat	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).formatStringDate(
         	value
-         , 	dateTimeFormat)
+         , 	currentFormat
+         , 	newFormat)
 }
 
 
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getPreviousDateTime"(
-    	int noOfDays	
-     , 	String timeZoneId	
-     , 	String dateTimeFormat	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getPreviousDateTime(
-        	noOfDays
-         , 	timeZoneId
-         , 	dateTimeFormat)
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getCurrentMonth"() {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getCurrentMonth()
 }
 
 
 def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getCurrentDate"() {
     (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getCurrentDate()
-}
-
-
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getFutureTime"(
-    	int hrs	
-     , 	int minute	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getFutureTime(
-        	hrs
-         , 	minute)
 }
 
 
@@ -895,19 +888,12 @@ def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getPastTime"(
 }
 
 
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.formatStringDate"(
-    	String value	
-     , 	String currentFormat	
-     , 	String newFormat	) {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).formatStringDate(
-        	value
-         , 	currentFormat
-         , 	newFormat)
-}
-
-
-def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getCurrentMonth"() {
-    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getCurrentMonth()
+def static "com.kms.katalon.keyword.datetime.DateTimeUtility.getFutureTime"(
+    	int hrs	
+     , 	int minute	) {
+    (new com.kms.katalon.keyword.datetime.DateTimeUtility()).getFutureTime(
+        	hrs
+         , 	minute)
 }
 
 
@@ -1502,20 +1488,6 @@ def static "com.CommonUtilitiesofNACACstudentApp.SignUpFlow.clickContinueAfterEn
 }
 
 
-def static "com.CommonUtilities.Registraions.GroupRegistrationAndVerification"(
-    	String VisitTypeName	
-     , 	TestObject VisitType	) {
-    (new com.CommonUtilities.Registraions()).GroupRegistrationAndVerification(
-        	VisitTypeName
-         , 	VisitType)
-}
-
-
-def static "com.CommonUtilities.Registraions.IndividualRegistration"() {
-    (new com.CommonUtilities.Registraions()).IndividualRegistration()
-}
-
-
 def static "com.CommonUtilities.CreationOperations.CreateDailyVisit"() {
     (new com.CommonUtilities.CreationOperations()).CreateDailyVisit()
 }
@@ -2077,6 +2049,11 @@ def static "com.CommonUtilities.CreateVisitWithDifferentStatuses.CreateDailyVisi
 }
 
 
+def static "com.CommonUtilities.CreateVisitOrGetExistingVisit.CreateADailyVisitOrGetExistingVisit"() {
+    (new com.CommonUtilities.CreateVisitOrGetExistingVisit()).CreateADailyVisitOrGetExistingVisit()
+}
+
+
 def static "com.CommonUtilities.SurveyMethods.CompleteSurvey"() {
     (new com.CommonUtilities.SurveyMethods()).CompleteSurvey()
 }
@@ -2181,11 +2158,6 @@ def static "com.CommonUtilities.SurveyMethods.selectVisitTypeRadioButton"() {
 }
 
 
-def static "com.CommonUtilities.CreateVisitOrGetExistingVisit.CreateADailyVisitOrGetExistingVisit"() {
-    (new com.CommonUtilities.CreateVisitOrGetExistingVisit()).CreateADailyVisitOrGetExistingVisit()
-}
-
-
 def static "com.CommonUtilities.CreateconventionUsingSelfServeTool.GoToCreateConventionPage"() {
     (new com.CommonUtilities.CreateconventionUsingSelfServeTool()).GoToCreateConventionPage()
 }
@@ -2231,13 +2203,6 @@ def static "com.CommonUtilities.MobiRegistrations.RegisterAGroupRequestThroughMo
 
 def static "com.CommonUtilities.MobiRegistrations.RegisterGroupThroughMobiAndReturnTheGroupName"() {
     (new com.CommonUtilities.MobiRegistrations()).RegisterGroupThroughMobiAndReturnTheGroupName()
-}
-
-
-def static "com.CommonUtilities.Testing.CreateDailyVisitVisitWithStartTimeWithIn30Minutes"(
-    	String VisitType	) {
-    (new com.CommonUtilities.Testing()).CreateDailyVisitVisitWithStartTimeWithIn30Minutes(
-        	VisitType)
 }
 
 
@@ -2298,6 +2263,13 @@ def static "com.CommonUtilities.CreateLiveSession.enterZoomIdAndAddAssigneeInclu
 }
 
 
+def static "com.CommonUtilities.Testing.CreateDailyVisitVisitWithStartTimeWithIn30Minutes"(
+    	String VisitType	) {
+    (new com.CommonUtilities.Testing()).CreateDailyVisitVisitWithStartTimeWithIn30Minutes(
+        	VisitType)
+}
+
+
 def static "com.CommonUtilities.MobiRegistrationWithInternationalNumberAndVerification.RegisterAnIndividualWithInternationalNumberAndVerifyValidation"() {
     (new com.CommonUtilities.MobiRegistrationWithInternationalNumberAndVerification()).RegisterAnIndividualWithInternationalNumberAndVerifyValidation()
 }
@@ -2305,6 +2277,16 @@ def static "com.CommonUtilities.MobiRegistrationWithInternationalNumberAndVerifi
 
 def static "com.CommonUtilities.MobiRegistrationWithInternationalNumberAndVerification.RegisterAGrouplWithInternationalNumberAndVerifyValidation"() {
     (new com.CommonUtilities.MobiRegistrationWithInternationalNumberAndVerification()).RegisterAGrouplWithInternationalNumberAndVerifyValidation()
+}
+
+
+def static "com.CommonUtilities.InviteUserutilities.LastName"() {
+    (new com.CommonUtilities.InviteUserutilities()).LastName()
+}
+
+
+def static "com.CommonUtilities.InviteUserutilities.RandomEmail"() {
+    (new com.CommonUtilities.InviteUserutilities()).RandomEmail()
 }
 
 
@@ -2323,13 +2305,30 @@ def static "com.CommonUtilities.Justfortesting.EventsTest"() {
 }
 
 
-def static "com.CommonUtilities.InviteUserutilities.LastName"() {
-    (new com.CommonUtilities.InviteUserutilities()).LastName()
+def static "com.CommonUtilities.CreateDiscoveryFilter.createDiscvoreyFilterWithVisitTypesRadioType"(
+    	String VisitType1	
+     , 	String VisitType2	) {
+    (new com.CommonUtilities.CreateDiscoveryFilter()).createDiscvoreyFilterWithVisitTypesRadioType(
+        	VisitType1
+         , 	VisitType2)
 }
 
 
-def static "com.CommonUtilities.InviteUserutilities.RandomEmail"() {
-    (new com.CommonUtilities.InviteUserutilities()).RandomEmail()
+def static "com.CommonUtilities.CreateDiscoveryFilter.createDiscoveryFilterWithVisitTypesMultiSelectType"(
+    	String VisitType1	
+     , 	String VisitType2	) {
+    (new com.CommonUtilities.CreateDiscoveryFilter()).createDiscoveryFilterWithVisitTypesMultiSelectType(
+        	VisitType1
+         , 	VisitType2)
+}
+
+
+def static "com.CommonUtilities.CreateDiscoveryFilter.createDiscoveryFilterWithMoreThanFiveOptions"(
+    	String VisitType1	
+     , 	String VisitType2	) {
+    (new com.CommonUtilities.CreateDiscoveryFilter()).createDiscoveryFilterWithMoreThanFiveOptions(
+        	VisitType1
+         , 	VisitType2)
 }
 
 
@@ -2360,33 +2359,6 @@ def static "com.CommonUtilities.CreateMeeting.enterZoomId"() {
 
 def static "com.CommonUtilities.CreateMeeting.selectDateDropDownFormat"() {
     (new com.CommonUtilities.CreateMeeting()).selectDateDropDownFormat()
-}
-
-
-def static "com.CommonUtilities.CreateDiscoveryFilter.createDiscvoreyFilterWithVisitTypesRadioType"(
-    	String VisitType1	
-     , 	String VisitType2	) {
-    (new com.CommonUtilities.CreateDiscoveryFilter()).createDiscvoreyFilterWithVisitTypesRadioType(
-        	VisitType1
-         , 	VisitType2)
-}
-
-
-def static "com.CommonUtilities.CreateDiscoveryFilter.createDiscoveryFilterWithVisitTypesMultiSelectType"(
-    	String VisitType1	
-     , 	String VisitType2	) {
-    (new com.CommonUtilities.CreateDiscoveryFilter()).createDiscoveryFilterWithVisitTypesMultiSelectType(
-        	VisitType1
-         , 	VisitType2)
-}
-
-
-def static "com.CommonUtilities.CreateDiscoveryFilter.createDiscoveryFilterWithMoreThanFiveOptions"(
-    	String VisitType1	
-     , 	String VisitType2	) {
-    (new com.CommonUtilities.CreateDiscoveryFilter()).createDiscoveryFilterWithMoreThanFiveOptions(
-        	VisitType1
-         , 	VisitType2)
 }
 
 
@@ -2481,30 +2453,6 @@ def static "com.CommonUtilities.UncheckAllDaysWhileCreatingDailyVisit.Uncheckall
 
 def static "com.CommonUtilities.NavigationFlows.NavigateToRequestQueue"() {
     (new com.CommonUtilities.NavigationFlows()).NavigateToRequestQueue()
-}
-
-
-def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInIndividualProfile"() {
-    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInIndividualProfile()
-}
-
-
-def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInIndividualRegistrantThreeDotMenu"(
-    	String Student	) {
-    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInIndividualRegistrantThreeDotMenu(
-        	Student)
-}
-
-
-def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInGroupProfile"() {
-    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInGroupProfile()
-}
-
-
-def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInGroupRegistrantThreeDotMenu"(
-    	String Group	) {
-    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInGroupRegistrantThreeDotMenu(
-        	Group)
 }
 
 

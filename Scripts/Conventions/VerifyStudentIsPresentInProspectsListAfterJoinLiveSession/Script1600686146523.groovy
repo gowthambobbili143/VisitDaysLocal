@@ -33,6 +33,8 @@ WebUI.click(findTestObject('Object Repository/NacacStudentApp/HomePageElements/P
 
 String emailOfStudent=WebUI.getText(findTestObject('Object Repository/NacacStudentApp/HomePageElements/GetEmaildetailsFromAccountBasicsPage'))
 
+String registrantType=WebUI.getText(findTestObject('Object Repository/NacacStudentApp/Account/getRegistrantType'))
+
 println(emailOfStudent)
 
 WebUI.click(findTestObject('Object Repository/NacacStudentApp/HomePageElements/EventsHomePage'))
@@ -106,4 +108,8 @@ if(!(WebUI.verifyElementPresent(findTestObject('Object Repository/ConventionsPag
 	KeywordUtil.markFailed("the student who view live session is not present in attendees list of prospects page")
 }
 
+if(!(WebUI.verifyElementPresent(findTestObject('ConventionsPageAdmin/VerifyRegistrantTypeOftheUserInLiveSessionsPage',['EMAIL':emailOfStudent],['RegistrantType':registrantType]),10,FailureHandling.OPTIONAL)))
+{
+	KeywordUtil.markFailed("the user who view live session having registrant type is not present in attendees list of prospects page")
+}
 
