@@ -72,15 +72,6 @@ def static "com.CommonUtilities.ItineraryPage.VerifyItineraryPage"(
 }
 
 
-def static "com.CommonUtilities.Promote.CreateCampaignWithGivenVisitTypes"(
-    	String SourceChannel	
-     , 	String[] VisitTypes	) {
-    (new com.CommonUtilities.Promote()).CreateCampaignWithGivenVisitTypes(
-        	SourceChannel
-         , 	VisitTypes)
-}
-
-
 def static "com.CommonUtilities.SelfServeUtilities.LoginToSelfServeTool"() {
     (new com.CommonUtilities.SelfServeUtilities()).LoginToSelfServeTool()
 }
@@ -152,6 +143,15 @@ def static "com.CommonUtilities.SelfServeUtilities.SetSurvey_PerformancedFlagToT
     	Object SettingUrl	) {
     (new com.CommonUtilities.SelfServeUtilities()).SetSurvey_PerformancedFlagToTrue(
         	SettingUrl)
+}
+
+
+def static "com.CommonUtilities.Promote.CreateCampaignWithGivenVisitTypes"(
+    	String SourceChannel	
+     , 	String[] VisitTypes	) {
+    (new com.CommonUtilities.Promote()).CreateCampaignWithGivenVisitTypes(
+        	SourceChannel
+         , 	VisitTypes)
 }
 
 
@@ -689,6 +689,16 @@ def static "com.CommonUtilities.ConventionCurators.createTags"() {
     (new com.CommonUtilities.ConventionCurators()).createTags()
 }
 
+
+def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofDailyVisitAndEventVisitTypes"() {
+    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofDailyVisitAndEventVisitTypes()
+}
+
+
+def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofOffCampusVisitTypes"() {
+    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofOffCampusVisitTypes()
+}
+
 /**
 	 * Refresh browser
 	 */
@@ -721,16 +731,6 @@ def static "com.CommonUtilities.CreateTestObject.getHtmlTableRows"(
 }
 
 
-def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofDailyVisitAndEventVisitTypes"() {
-    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofDailyVisitAndEventVisitTypes()
-}
-
-
-def static "com.CommonUtilities.EditVisitTypeDetailsInDetailsPage.EditDetailsofOffCampusVisitTypes"() {
-    (new com.CommonUtilities.EditVisitTypeDetailsInDetailsPage()).EditDetailsofOffCampusVisitTypes()
-}
-
-
 def static "com.CommonUtilities.EditRegistrantType.ChangeRegistrantTypeToGroupsOnly"(
     	String VisitType	) {
     (new com.CommonUtilities.EditRegistrantType()).ChangeRegistrantTypeToGroupsOnly(
@@ -744,6 +744,20 @@ def static "com.CommonUtilitiesofNACACstudentApp.LoginToStudentApp.loginToStuden
     (new com.CommonUtilitiesofNACACstudentApp.LoginToStudentApp()).loginToStudentApp(
         	username
          , 	password)
+}
+
+
+def static "com.CommonUtilities.VisitTypeSummaryPage.EditSettingsInSummaryPageInDailyVisitsAndEvents"(
+    	TestObject VisitTypeCategory	) {
+    (new com.CommonUtilities.VisitTypeSummaryPage()).EditSettingsInSummaryPageInDailyVisitsAndEvents(
+        	VisitTypeCategory)
+}
+
+
+def static "com.CommonUtilities.VisitTypeSummaryPage.EditSettingsInSummaryPageInOffCampus"(
+    	TestObject VisitTypeCategory	) {
+    (new com.CommonUtilities.VisitTypeSummaryPage()).EditSettingsInSummaryPageInOffCampus(
+        	VisitTypeCategory)
 }
 
 
@@ -1488,6 +1502,20 @@ def static "com.CommonUtilitiesofNACACstudentApp.SignUpFlow.clickContinueAfterEn
 }
 
 
+def static "com.CommonUtilities.Registraions.GroupRegistrationAndVerification"(
+    	String VisitTypeName	
+     , 	TestObject VisitType	) {
+    (new com.CommonUtilities.Registraions()).GroupRegistrationAndVerification(
+        	VisitTypeName
+         , 	VisitType)
+}
+
+
+def static "com.CommonUtilities.Registraions.IndividualRegistration"() {
+    (new com.CommonUtilities.Registraions()).IndividualRegistration()
+}
+
+
 def static "com.CommonUtilities.CreationOperations.CreateDailyVisit"() {
     (new com.CommonUtilities.CreationOperations()).CreateDailyVisit()
 }
@@ -1862,6 +1890,17 @@ def static "com.CommonUtilitiesofNACACstudentApp.Logout.logoutfromStudentApp"() 
 }
 
 
+def static "com.CommonUtilities.sample.CheckTheOrder"(
+    	TestObject Option	
+     , 	String Question	
+     , 	String ExpectedOption	) {
+    (new com.CommonUtilities.sample()).CheckTheOrder(
+        	Option
+         , 	Question
+         , 	ExpectedOption)
+}
+
+
 def static "com.CommonUtilities.Quit.QuitMobi"() {
     (new com.CommonUtilities.Quit()).QuitMobi()
 }
@@ -1879,17 +1918,6 @@ def static "com.CommonUtilities.Quit.CloseMobiInConfirmationPageForInstantBook"(
 
 def static "com.CommonUtilities.Quit.ExitMobi"() {
     (new com.CommonUtilities.Quit()).ExitMobi()
-}
-
-
-def static "com.CommonUtilities.sample.CheckTheOrder"(
-    	TestObject Option	
-     , 	String Question	
-     , 	String ExpectedOption	) {
-    (new com.CommonUtilities.sample()).CheckTheOrder(
-        	Option
-         , 	Question
-         , 	ExpectedOption)
 }
 
 
@@ -2049,11 +2077,6 @@ def static "com.CommonUtilities.CreateVisitWithDifferentStatuses.CreateDailyVisi
 }
 
 
-def static "com.CommonUtilities.CreateVisitOrGetExistingVisit.CreateADailyVisitOrGetExistingVisit"() {
-    (new com.CommonUtilities.CreateVisitOrGetExistingVisit()).CreateADailyVisitOrGetExistingVisit()
-}
-
-
 def static "com.CommonUtilities.SurveyMethods.CompleteSurvey"() {
     (new com.CommonUtilities.SurveyMethods()).CompleteSurvey()
 }
@@ -2155,6 +2178,11 @@ def static "com.CommonUtilities.SurveyMethods.selectAudience"() {
 
 def static "com.CommonUtilities.SurveyMethods.selectVisitTypeRadioButton"() {
     (new com.CommonUtilities.SurveyMethods()).selectVisitTypeRadioButton()
+}
+
+
+def static "com.CommonUtilities.CreateVisitOrGetExistingVisit.CreateADailyVisitOrGetExistingVisit"() {
+    (new com.CommonUtilities.CreateVisitOrGetExistingVisit()).CreateADailyVisitOrGetExistingVisit()
 }
 
 
@@ -2280,16 +2308,6 @@ def static "com.CommonUtilities.MobiRegistrationWithInternationalNumberAndVerifi
 }
 
 
-def static "com.CommonUtilities.InviteUserutilities.LastName"() {
-    (new com.CommonUtilities.InviteUserutilities()).LastName()
-}
-
-
-def static "com.CommonUtilities.InviteUserutilities.RandomEmail"() {
-    (new com.CommonUtilities.InviteUserutilities()).RandomEmail()
-}
-
-
 def static "com.CommonUtilities.Justfortesting.JustForTesting"() {
     (new com.CommonUtilities.Justfortesting()).JustForTesting()
 }
@@ -2302,6 +2320,16 @@ def static "com.CommonUtilities.Justfortesting.NewMethd"() {
 
 def static "com.CommonUtilities.Justfortesting.EventsTest"() {
     (new com.CommonUtilities.Justfortesting()).EventsTest()
+}
+
+
+def static "com.CommonUtilities.InviteUserutilities.LastName"() {
+    (new com.CommonUtilities.InviteUserutilities()).LastName()
+}
+
+
+def static "com.CommonUtilities.InviteUserutilities.RandomEmail"() {
+    (new com.CommonUtilities.InviteUserutilities()).RandomEmail()
 }
 
 
@@ -2456,36 +2484,27 @@ def static "com.CommonUtilities.NavigationFlows.NavigateToRequestQueue"() {
 }
 
 
-def static "com.CommonUtilities.CalendarMethods.MonthNumber"(
-    	String MonthShortName	) {
-    (new com.CommonUtilities.CalendarMethods()).MonthNumber(
-        	MonthShortName)
+def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInIndividualProfile"() {
+    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInIndividualProfile()
 }
 
 
-def static "com.CommonUtilities.CalendarMethods.ReturnMonthHeader"(
-    	String YorM	) {
-    (new com.CommonUtilities.CalendarMethods()).ReturnMonthHeader(
-        	YorM)
+def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInIndividualRegistrantThreeDotMenu"(
+    	String Student	) {
+    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInIndividualRegistrantThreeDotMenu(
+        	Student)
 }
 
 
-def static "com.CommonUtilities.CalendarMethods.VerifyVisitPresentInFirstDayOfMonthView"(
-    	String VisitType	) {
-    (new com.CommonUtilities.CalendarMethods()).VerifyVisitPresentInFirstDayOfMonthView(
-        	VisitType)
+def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInGroupProfile"() {
+    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInGroupProfile()
 }
 
 
-def static "com.CommonUtilities.CalendarMethods.VerifyVisitPresentInLastDayOfMonthView"(
-    	String VisitType	) {
-    (new com.CommonUtilities.CalendarMethods()).VerifyVisitPresentInLastDayOfMonthView(
-        	VisitType)
-}
-
-
-def static "com.CommonUtilities.CalendarMethods.Testmethod"() {
-    (new com.CommonUtilities.CalendarMethods()).Testmethod()
+def static "com.CommonUtilities.AddVisitToItineraryLabelInUserProfile.VerifyAddVisitToItineraryLabelInGroupRegistrantThreeDotMenu"(
+    	String Group	) {
+    (new com.CommonUtilities.AddVisitToItineraryLabelInUserProfile()).VerifyAddVisitToItineraryLabelInGroupRegistrantThreeDotMenu(
+        	Group)
 }
 
 
@@ -2548,4 +2567,37 @@ def static "com.CommonUtilities.Times.CampareTwoDates"(
     (new com.CommonUtilities.Times()).CampareTwoDates(
         	Date1
          , 	Date2)
+}
+
+
+def static "com.CommonUtilities.CalendarMethods.MonthNumber"(
+    	String MonthShortName	) {
+    (new com.CommonUtilities.CalendarMethods()).MonthNumber(
+        	MonthShortName)
+}
+
+
+def static "com.CommonUtilities.CalendarMethods.ReturnMonthHeader"(
+    	String YorM	) {
+    (new com.CommonUtilities.CalendarMethods()).ReturnMonthHeader(
+        	YorM)
+}
+
+
+def static "com.CommonUtilities.CalendarMethods.VerifyVisitPresentInFirstDayOfMonthView"(
+    	String VisitType	) {
+    (new com.CommonUtilities.CalendarMethods()).VerifyVisitPresentInFirstDayOfMonthView(
+        	VisitType)
+}
+
+
+def static "com.CommonUtilities.CalendarMethods.VerifyVisitPresentInLastDayOfMonthView"(
+    	String VisitType	) {
+    (new com.CommonUtilities.CalendarMethods()).VerifyVisitPresentInLastDayOfMonthView(
+        	VisitType)
+}
+
+
+def static "com.CommonUtilities.CalendarMethods.Testmethod"() {
+    (new com.CommonUtilities.CalendarMethods()).Testmethod()
 }

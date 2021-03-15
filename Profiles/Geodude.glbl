@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>Charizard Staging</name>
+   <name>Geodude</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-admin.visitdays.com/'</initValue>
+      <initValue>'https://geodude-admin.visitdays.com/'</initValue>
       <name>StagingUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-student.visitdays.com/bbtesting/mobi'</initValue>
+      <initValue>'https://geodude-student.visitdays.com/bbtesting/mobi'</initValue>
       <name>CurrentMobiUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-student.visitdays.com/bbtesting/evr/'</initValue>
+      <initValue>'https://geodude-student.visitdays.com/bbtesting/evr/'</initValue>
       <name>EvrUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-student.visitdays.com/bbtesting/evrc/'</initValue>
+      <initValue>'https://geodude-student.visitdays.com/bbtesting/evrc/'</initValue>
       <name>EvrcUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://vd-api-staging-charizard.herokuapp.com/admin/token'</initValue>
+      <initValue>'https://vd-api-staging-geodude.herokuapp.com/admin/token'</initValue>
       <name>TokenEndPoint</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-mobi.visitdays.com/register/individual-academics?subdomain=bbtesting'</initValue>
+      <initValue>'https://geodude-mobi.visitdays.com/register/individual-academics?subdomain=bbtesting'</initValue>
       <name>ReferHeader</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://vd-api-staging-charizard.herokuapp.com/mobi/registrations'</initValue>
+      <initValue>'https://vd-api-staging-geodude.herokuapp.com/mobi/registrations'</initValue>
       <name>RegistrationEndPoint</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://vd-api-staging-charizard.herokuapp.com/admin/itineraries/'</initValue>
+      <initValue>'http://vd-api-staging-geodude.herokuapp.com/admin/itineraries/'</initValue>
       <name>SurveyCodeEndPoint</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-student.visitdays.com/bbtesting/surv/'</initValue>
+      <initValue>'https://geodude-student.visitdays.com/bbtesting/surv/'</initValue>
       <name>SurveyLink</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-admin.visitdays.com/survey'</initValue>
+      <initValue>'https://geodude-admin.visitdays.com/survey'</initValue>
       <name>SurveyPageUrlInAdminApp</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-student.visitdays.com/bbtesting/ci/'</initValue>
+      <initValue>'https://geodude-student.visitdays.com/bbtesting/ci/'</initValue>
       <name>CampaignUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -66,7 +66,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://vd-api-staging-charizard.herokuapp.com/web/'</initValue>
+      <initValue>'http://vd-api-staging-geodude.herokuapp.com/web/'</initValue>
       <name>SelfServeUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -76,32 +76,32 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://vd-api-staging-charizard.herokuapp.com/'</initValue>
+      <initValue>'https://vd-api-staging-geodude.herokuapp.com/'</initValue>
       <name>apiBaseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://vd-api-staging-charizard.herokuapp.com/mobi/registrations'</initValue>
+      <initValue>'https://vd-api-staging-geodude.herokuapp.com/mobi/registrations'</initValue>
       <name>registrationEndPoint</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'vd-api-staging-charizard.herokuapp.com'</initValue>
+      <initValue>'vd-api-staging-geodude.herokuapp.com'</initValue>
       <name>Host</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-mobi.visitdays.com'</initValue>
+      <initValue>'https://geodude-mobi.visitdays.com'</initValue>
       <name>Origin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-mobi.visitdays.com/register?subdomain='</initValue>
+      <initValue>'https://geodude-mobi.visitdays.com/register?subdomain='</initValue>
       <name>Referer</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://charizard-student.visitdays.com/'</initValue>
+      <initValue>'https://geodude-student.visitdays.com/'</initValue>
       <name>StudentAppUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -110,13 +110,13 @@
       <name>institutionId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>https://bais-charizard.visitdays.vercel.app/, https://nacac-charizard.visitdays.vercel.app/</description>
-      <initValue>'https://nacac-charizard.visitdays.vercel.app/'</initValue>
+      <description>https://bais-geodude.visitdays.vercel.app/</description>
+      <initValue>'https://nacac-geodude.visitdays.vercel.app/'</initValue>
       <name>studenturl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://nacac-charizard.visitdays.vercel.app'</initValue>
+      <initValue>'http://nacac-geodude.visitdays.vercel.app'</initValue>
       <name>StudentUrlCheck</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
